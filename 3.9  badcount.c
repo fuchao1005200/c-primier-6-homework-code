@@ -8,5 +8,6 @@ int main(void)
   float g = 8.0f;
   printf("%d\n",n,m);
   printf("%d %d %d\n",n);
-  printff("%d %d.\n",f,g);
+  printf("%d %d.\n",f,g);
   return 0;
+}
