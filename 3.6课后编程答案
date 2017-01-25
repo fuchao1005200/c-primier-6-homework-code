@@ -1,0 +1,19 @@
+#include <stdio.h>
+const int pintuo_per_g = 950;
+const long double water = 3.0e-23;
+int main(void)
+{
+    float pint;
+    float kg_w;
+    float pint_g;
+    printf("enter the pints:");
+    scanf("%f",&pint);
+    pint_g = pint * pintuo_per_g;
+    kg_w = pint_g/water;
+    printf("show the numbers of waters %f",kg_w);
+    return 0;
+    
+    
+    
+    
+}
