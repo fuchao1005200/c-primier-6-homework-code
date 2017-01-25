@@ -1,0 +1,16 @@
+#include <stdio.h>
+const float per_inch_to_cm = 2.54;
+int main(void)
+{
+  
+    float tall ;
+    float tall_cm;
+    printf("enter your tall used inch:");
+    scanf("%f",&tall);
+    tall_cm = tall*per_inch_to_cm;
+    printf("the high for me inch convert to cm is %.2f\n",tall_cm);
+    return 0;
+    
+    
+    
+}
