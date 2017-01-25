@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void)
+{
+    float cup_numbers;
+    float pintuo;
+    float ounce;
+    float tangshao;
+    float chashao;
+  
+    printf("输入用户需要多少杯: ");
+    scanf("%f",&cup_numbers);
+    pintuo = cup_numbers/2;
+    printf("used pintuo to present bei %f\n",pintuo);
+    ounce = cup_numbers*8;
+    printf("used ounce to present bei %f\n",ounce);
+    tangshao = cup_numbers*8*2;
+    printf("used tangshao to present bei %f\n",tangshao);
+    chashao = cup_numbers*8*2*3;
+    printf("used chashao to present bei %f\n",chashao);
+    return 0;
+}
