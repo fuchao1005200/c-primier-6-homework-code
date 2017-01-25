@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main(void)
+{
+    int a;
+    printf("enter the asii:\n");
+    scanf("%d",&a);
+    printf("the number of asii is %c\n",a);
+    return 0;
+}
