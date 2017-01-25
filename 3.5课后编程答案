@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main(void)
+{
+    long double seconds;
+    long double per_year_seconds = 3.156e7;
+    int year;
+    scanf("%d",&year);
+    seconds = per_year_seconds*year;
+    printf("%Lf",seconds);
+    
+}
