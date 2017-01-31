@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+int main(void)
+{
+    char a[20],b[20];
+    scanf("%s%s",a,b);
+    printf("%s %s\n",b,a);
+    printf("%-7d %-7d",strlen(b),strlen(a));
+           
+   
+}
