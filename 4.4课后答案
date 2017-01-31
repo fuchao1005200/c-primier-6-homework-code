@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+
+int main(void)
+{
+    float tall;
+    char name[10];
+    char surnname[10];
+    printf("please enter your tall.\n");
+    scanf("%f",&tall);
+    printf("please enter your name.\n");
+    scanf("%s",name);
+    printf("please enter your surnname.\n");
+    scanf("%s",surnname);
+    printf("%s%s,you are %f feet tall.\n",name,surnname,tall);
+    return 0;
+    
+    
+    
+    
+    
+}
