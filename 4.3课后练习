@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+
+int main(void)
+{
+    float a;
+    printf("please enter float number.\n");
+    scanf("%f",&a);
+    printf("%.3f\n",a);
+    printf("%.3e\n",a);
+    return 0;
+    
+    
+    
+}
