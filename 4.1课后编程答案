@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+
+int main(void)
+{
+    char name[10];
+    char surnname[10];
+    printf("please enter your name.\n");
+    scanf("%s",name);
+    printf("please enter your surnname.\n");
+    scanf("%s",surnname);
+    printf("%s.%s\n",name,surnname);
+    return 0;
+    
+    
+}
