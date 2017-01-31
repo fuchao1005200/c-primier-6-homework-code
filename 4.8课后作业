@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <float.h>
+const float g_l=3.875;
+const float m_k=1.609;
+int main(void)
+{
+    float MILES;
+    float GALLONS;
+    float M_G;
+    float L_KM;
+    printf("please enter your travel miles:\n");
+    scanf("%f",&MILES);
+    printf("please enter your consumed gallons:\n");
+    scanf("%f",&GALLONS);
+    M_G=GALLONS/MILES;
+    printf("one mile consum %.1f gallons gas.\n",M_G);
+    L_KM=((GALLONS*g_l)/(MILES*m_k))*100;
+    printf("100km consum %.1f kg gas.\n",L_KM);
+    return 0;
+
+    
+           
+   
+}
