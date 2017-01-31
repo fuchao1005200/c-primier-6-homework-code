@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+
+int main(void)
+{
+    
+    float mbitS;
+    float mbyteS;
+    float by_bitS;
+    float SECONDS;
+    printf("enter your download speed.\n");
+    scanf("%f",&mbitS);
+    printf("enter your size if file.\n");
+    scanf("%f",&mbyteS);
+    by_bitS=mbitS/8;
+    SECONDS =mbyteS/by_bitS;
+    printf("At %.2f megabits per second,a file of %.2f megabytes downloads in %.2f seconds.",mbitS,mbyteS,SECONDS);
+    return 0;
+    
+    
+    
+    
+    
+    
+}
