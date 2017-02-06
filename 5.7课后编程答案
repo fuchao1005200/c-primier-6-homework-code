@@ -1,0 +1,15 @@
+#include <stdio.h>
+float cube(float);
+
+int main(void)
+{
+    float x;
+    scanf("%f",&x);
+    cube(x);
+    printf("%f   %.2f",x,cube(x));
+    
+}
+float cube(float a)
+{
+    return(a*a*a);
+}
