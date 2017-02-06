@@ -1,0 +1,13 @@
+#include <stdio.h>
+#define D_C_W 7
+
+
+int main(void)
+{
+    int days;
+    printf("please enter days:\n");
+    scanf("%d",&days);
+    printf(" %d dayes are %d weeks, %d days  \n",days,days/D_C_W,days%D_C_W);
+    return 0;
+    
+}
