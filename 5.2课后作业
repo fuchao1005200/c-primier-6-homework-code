@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+
+int main()
+{
+    int n,cnt=11;
+    scanf("%d",&n);
+    while(cnt--)
+    {
+        printf("%d",n+10-cnt);
+        if(cnt !=0)
+            printf("  ");
+        else
+            printf("\n");
+    
+    
+    }
+        
+    return 0;
+}
