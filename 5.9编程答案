@@ -1,0 +1,23 @@
+#include <stdio.h>
+const double a = 0.5556;
+const double b=32;
+const double c=273.16;
+void temper(double fah);
+int main(void)
+{
+    double Fahrenheit;
+    printf("please input the fahrenheit:");
+    while(scanf("%lf",&Fahrenheit)==1)
+    {
+        temper(Fahrenheit);
+        printf("please input the fahrenheit:");
+    }
+    printf("end \n");
+    
+}
+void temper(double fah)
+{
+    printf("fahrenheit = %.2lf\t",fah);
+    printf("celsius =%.2lf\t",a*(fah-b));
+    printf("kelvin = %.2lf\n",a*(fah-b)+273.16);
+}
