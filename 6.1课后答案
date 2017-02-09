@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define SIZE 26
+int main(void)
+{
+    char ch[SIZE];
+    int index;
+    int i;
+    int j;
+    ch[0]='a';
+
+   for(index =1,i=1,j=0;index<=SIZE;index++,i++,j++)
+       ch[i]=ch[j]+1;
+   for(i=1,index=0;i<=SIZE;index++,i++)
+    printf("%6c  ",ch[index]);
+    return 0;
+}
