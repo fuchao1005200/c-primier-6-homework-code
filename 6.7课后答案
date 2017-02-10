@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(void)
+{
+ char ch[100];
+ int n;
+ scanf("%s",ch);
+ for (n=strlen(ch)-1;n>=0;n--)
+ printf("%c",ch[n]);
+ printf("\n");
+}
