@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+
+int main(void)
+{
+ float a,b;
+ scanf("%f %f",&a,&b);
+do{
+    printf("%8f",((a-b)/(a*b)));
+    printf("\n");
+}while(scanf("%f %f",&a,&b)==1);
+printf("the wrong type");
+return 0;
+}
+
