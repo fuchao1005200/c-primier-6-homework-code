@@ -8,7 +8,7 @@ int main(void)
 do{
     printf("%8f",((a-b)/(a*b)));
     printf("\n");
-}while(scanf("%f %f",&a,&b)==1);
+}while(scanf("%f %f",&a,&b)==2);
 printf("the wrong type");
 return 0;
 }
