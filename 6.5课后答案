@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main(void) {
+    char letter;
+    int i,j,k;
+    printf("Please enter a upper letter:");
+    scanf("%c", &letter);
+    for (i = 0; i <= letter - 'A'; i++) {
+        for ( j = 0; j < letter - 'A' - i; j++) {
+            printf(" ");
+        }//output space
+        for ( k = 0; k <= i; k++) {
+            printf("%c", 'A' + k);
+        }//ascending order
+        for ( k = i; k > 0; k--) {
+            printf("%c", 'A' + k - 1);
+        }//descending order
+        printf("\n");
+    }
+    return 0;
+}
