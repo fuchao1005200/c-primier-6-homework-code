@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main(void)
+{
+   int upper,lower,index;
+   int square,cube;
+
+  printf("enter starting integer:  ");
+  scanf("%d",&lower);
+  printf("enter ending integer:");
+  scanf("%d",&upper);
+
+  printf("%5s %10s %15s\n","num","square","cube");
+  for(index=lower;index<=upper;index++)
+  {
+      square=index*index;
+      cube=square*index;
+      printf("%5d %10d %15d\n",index,square,cube);
+  }
+   return 0;
+}
