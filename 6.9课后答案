@@ -1,0 +1,22 @@
+#include<stdio.h>
+float number(float a,float b);
+int main(void)
+{
+    float x,y,z;
+    scanf("%f %f",&x,&y);
+    do{
+        z=number(x,y);
+        printf("%f\n",z);
+    }while(scanf(" %f %f",&x,&y)==2);
+    printf("you enter the wrong type.");
+    return 0;
+}
+
+
+float number(float a,float b)
+{
+    return ((a-b)/(a*b));
+
+}
+
+
