@@ -1,0 +1,24 @@
+#include <stdio.h>
+#define SIZE 8
+
+int main(void)
+{
+    int i;
+    double number[SIZE];
+    double numbersum[SIZE];
+
+    for(i=0;i<SIZE;i++)
+        scanf("%lf",&number[i]);
+    for(i=0;i<SIZE;i++)
+        numbersum[i]=number[i]+numbersum[i-1];
+    for(i=0;i<SIZE;i++)
+        printf("%6.2lf",number[i]);
+    printf("\n");
+    for(i=0;i<SIZE;i++)
+        printf("%6.2lf",numbersum[i]);
+    printf("\n");
+    return 0;
+
+    
+    
+}
