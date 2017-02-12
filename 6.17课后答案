@@ -1,0 +1,20 @@
+#include <stdio.h>
+#define rate 0.08
+
+int main(void)
+{
+    int bonus = 100;
+    float s_bonus;
+    float t_bonus;
+    int n=1;
+    do{
+        s_bonus =bonus+bonus*rate*n;
+        t_bonus = s_bonus -10*n;
+        
+        n++;
+        
+        
+    }while((t_bonus>0)==1);
+    printf("it takes %d year take all the moneys.",n);
+    return 0;
+}
