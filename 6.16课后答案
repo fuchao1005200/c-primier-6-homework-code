@@ -1,0 +1,24 @@
+#include <stdio.h>
+#define s_rate 0.1
+#define d_rate 0.05
+
+int main(void)
+{
+    int invest = 100;
+    float invest2=100;
+    float s_sum;
+  
+    int year,n;
+     n=1;
+    do{
+        s_sum=invest+(invest*s_rate*n);
+        n++;
+        invest2=invest2*(1+d_rate);
+        year++;
+        
+    }while((invest2<s_sum)==1);
+    printf("it tast %d year the number for s_sum is %f for invest2 is %f.\n",year,s_sum,invest2);
+    return 0;
+    
+    
+}
