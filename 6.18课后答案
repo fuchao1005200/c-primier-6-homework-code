@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int friends =5;
+    int n=1;
+
+    for(;friends<=150;n++)
+    {
+         printf("he has %d friends in %d weeks\n",friends,n);
+         friends -=1*n;
+         friends=friends*2;
+     
+     
+    
+    }
+    return 0;
+}
