@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void)
+{
+     int SPACE=0;
+     int newline=0;
+     int chs=0;
+     char ch;
+
+while((ch=getchar()) != '#')
+{
+    if(ch == ' ')
+        SPACE++;
+    else if(ch == '\n')
+        newline++;
+    else
+        chs++;
+}
+   printf("this sences include %d spaces ,%d newlines,%d characters.",SPACE,newline,chs);
+   return 0;
+
+
+
+}
