@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(void)
+{
+    char ch;
+    int i=0,j=0;
+    printf("请输入字符串,#结束.\n");
+    while( (ch = getchar()) != '#')
+    {
+       switch(ch)
+       {
+        case '.':
+        {ch-=13;
+         i++;
+         putchar(ch);
+         break;
+        }
+
+        case '!':
+        {
+        putchar('!');
+        putchar('!');
+        j++;
+        break;
+        }
+        default:
+        putchar(ch);
+
+       }
+    }
+    printf("\n 进行了%d次句号替代，进行了%d次感叹号替代\n",i,j);
+    return 0;
+}
