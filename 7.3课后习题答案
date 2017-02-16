@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+   int integer;
+   int oushu=0;
+   int jishu=0;
+   int sumou=0;
+   int sumjishu=0;
+   float oua;
+   float jisa;
+   printf("enter your integer:\n");
+   while(scanf("%d",&integer)==1&&(integer != 0))
+   {
+       if(integer%2==0)
+       {
+           oushu++;
+           sumou+=integer;
+           oua=(float)sumou/oushu;
+
+       }
+       if(integer%2>0)
+       {
+           jishu++;
+           sumjishu+=integer;
+           jisa=(float)sumjishu/jishu;
+       }
+   }
+   printf("enter oushu %d ,averoushu is %.2f,entet jishu %d,sumjishu is %.2f",oushu,oua,jishu,jisa);
+   return 0;
+}
