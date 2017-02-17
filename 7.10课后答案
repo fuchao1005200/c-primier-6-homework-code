@@ -1,0 +1,57 @@
+#include <stdio.h>
+#define a 17850 //单身收入
+#define b 23900 //户主
+#define c 29750 //已婚，共有
+#define d 14875 //离异
+#define tax_rate1 0.15//税率未超出部分
+#define tax_rate2 0.28//税率超出部分
+
+
+int main(void)
+{
+
+  char ch;//用户类型
+  float salary;//工资总数
+  float tax;//计算税金的金额
+  printf("请输入的用户类型。\n");
+  printf("请输入的年收入。\n");
+
+  while((scanf("%c",&ch))==1&&(scanf("%f",&salary))==1)
+  {
+      switch(ch)
+      {
+          case 'a':
+              if(salary>a)
+                 tax=a*tax_rate1+(salary-a)*tax_rate2;
+              else
+                tax=salary*tax_rate1;
+              printf("你应该缴纳的税金为%.2f.",tax);
+              break;
+          case 'b':
+              if(salary>b)
+                tax=b*tax_rate1+(salary-b)*tax_rate2;
+              else
+                tax=salary*tax_rate1;
+              printf("你应该缴纳的税金为%.2f.",tax);
+              break;
+          case 'c':
+              if(salary>c)
+                tax=c*tax_rate1+(salary-c)*tax_rate2;
+              else
+                 tax=salary*tax_rate1;
+              printf("你应该缴纳的税金为%.2f.",tax);
+              break;
+          case 'd':
+              if(salary>d)
+                tax=d*tax_rate1+(salary-d)*tax_rate2;
+              else
+                 tax=salary*tax_rate1;
+              printf("你应该缴纳的税金为%.2f.",tax);
+              break;
+          default:
+            printf("you enter the wrong type.\n");
+            printf("you should type is a,b,c,d");
+      }
+    return 0;
+  }
+}
