@@ -1,0 +1,34 @@
+#include <stdio.h>
+#define b_salary 1000
+#define e_hours 40.0
+#define tax1 0.15
+#define tax2 0.2
+#define tax3 0.25
+#define tex1_s 300
+#define tex2_s 150
+int main(void)
+{
+   float w_hours;
+   float s_salary;
+    float i_salary;
+    float s_tax;
+    while((scanf("%f",&w_hours))==1)
+    {
+        if(w_hours>e_hours)
+        {
+            w_hours=(w_hours-e_hours)*1.5+e_hours;
+            s_salary=(float)(b_salary*w_hours);
+            s_tax=(tex1_s*tax1)+(tex2_s*tax2)+(s_salary-tex1_s-tex2_s)*tax3;
+            i_salary=s_salary-s_tax;
+        printf("这个人一个星期共计收入%.2f，共缴纳税金%.2f,交完税金后的净收入为%.2f.\n",s_salary,s_tax,i_salary);
+        }
+        else
+        {
+           s_salary=b_salary*w_hours;
+           s_tax=(tex1_s*tax1)+(tex2_s*tax2)+(s_salary-tex1_s-tex2_s)*tax3;
+           i_salary=s_salary-s_tax;
+           printf("这个人一个星期共计收入%.2f，共缴纳税金%.2f,交完税金后的净收入为%.2f.\n",s_salary,s_tax,i_salary);
+        }
+    }
+    return 0;
+}
