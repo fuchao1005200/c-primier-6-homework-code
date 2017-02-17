@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void)
+{
+int i=0;
+char ch;
+while((ch=getchar()) !='#')
+{
+    if(ch=='e')
+        continue;
+    if(ch=='i')
+        i++;
+}
+printf("%d",i);
+}
