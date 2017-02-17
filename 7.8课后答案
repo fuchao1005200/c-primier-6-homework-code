@@ -1,0 +1,60 @@
+#include <stdio.h>
+#define SL15 0.15
+#define SL20 0.20
+#define SL25 0.25
+#define GZ1 8.75
+#define GZ2 9.33
+#define GZ3 10.00
+#define GZ4 11.20
+void gzdj(void);
+int main(void)
+{
+    int x, n;
+    double gzh, gz, shui, jgz;
+
+    gzdj();
+
+    while((scanf("%d", &x) != 0))
+    {
+        switch (x) {
+            case 1: gzh = GZ1; break;
+            case 2: gzh = GZ2; break;
+            case 3: gzh = GZ3; break;
+            case 4: gzh = GZ4; break;
+        }
+        if(x < 5) {
+            printf("请输入您工作的时间： ");
+            scanf("%d", &n);
+            if(n <= 40)
+                gz = n * gzh;
+            else
+                gz = ((n - 40) * 1.5 + 40) * gzh;
+            if(gz <= 300)
+                shui = gz * SL15;
+            else if(gz <= 450)
+                shui = (gz - 300) * SL20 + 300 * SL15;
+            else
+                shui = (gz - 450) * SL25 + 300 * SL15 + 150 * SL20;
+            jgz = gz - shui;
+            printf("您工资总额为:$%6.2f，税金为:$%6.2f，净工资为:$%6.2f.\n\n\n", gz, shui, jgz);
+            printf("请输入您工作的时间： \n");
+            gzdj();
+        }else if(x == 5) {
+            break;
+        }else{
+            printf("输入有误，请重新输入.\n");
+            gzdj();
+        }
+    }
+    return 0;
+}
+
+void gzdj(void)
+{
+    printf("*****************************************************************\n");
+    printf("Enter the number corresponding to the desired pay rate or action:\n");
+    printf("1)$8.75/hr                      2)$9.33/hr\n");
+    printf("3)$10.00/hr                     4)$11.20/hr\n");
+    printf("5)quit\n");
+    printf("*****************************************************************\n\n");
+}
