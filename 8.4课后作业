@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <stdbool.h>
+
+int main(void)
+{
+    char input;
+    int words_count = 0;
+    int character_count = 0;
+    bool inwords = false;
+
+
+    printf("enter words:\n");
+    while( (input = getchar()) != EOF)
+    {
+        if(!isspace(input)&&!ispunct(input))
+            character_count++;
+        if(!isspace(input)&&!inwords)
+        {
+            inwords = true;
+            words_count++;
+        }
+        if((ispunct(input) || isspace(input)) &&inwords)
+            inwords = false;
+    }
+    printf("%d characters read.\n",character_count);
+    printf("%d words read.\n",words_count);
+    printf("the average number of letters per words is %.2f.\n",(float)words_count/(float)character_count);
+    return 0;
+}
