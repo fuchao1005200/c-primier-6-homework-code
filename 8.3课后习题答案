@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <ctype.h>
+int main(void)
+{
+    int ch;
+    int uct = 0;
+    int lct = 0;
+
+    while ((ch = getchar()) != EOF)
+        {if (isupper(ch))
+            uct++;
+        else if (islower(ch))
+            lct++;
+        }
+    printf("%d uppercase characters read\n", uct);
+    printf("%d lowercase characters read\n", lct);
+
+    return 0;
+}
